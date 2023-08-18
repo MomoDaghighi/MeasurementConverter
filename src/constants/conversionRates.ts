@@ -9,13 +9,13 @@ export const LENGTH_CONVERSION_RATES: Record<LengthUnit, number> = {
 };
 
 export const WEIGHT_CONVERSION_RATES: Record<WeightUnit, number> = {
-  kg: 1,
-  g: 1000,
-  lb: 2.20462
+  kilogram: 1,
+  gram: 1000,
+  pound: 2.20462
 };
 
 export const VOLUME_CONVERSION_RATES: Record<VolumeUnit, number> = {
-  l: 1,
-  "m^3": 0.001,
+  liter: 1,
+  "cubic meter": 0.001,
   cc: 1000
 };

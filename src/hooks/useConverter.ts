@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { LengthUnit, Unit, UnitCategory, VolumeUnit, WeightUnit } from '../types/units';
 import { LENGTH_CONVERSION_RATES, WEIGHT_CONVERSION_RATES, VOLUME_CONVERSION_RATES } from '../constants/conversionRates';
 
-export const useConverter = (inputUnit: Unit, outputUnit: Unit) => {
+export const useConverter = (inputUnit: Unit, outputUnit: Unit, initialCategory: UnitCategory) => {
 
   const [input, setInput] = useState<number | "">(1);
-  const [category, setCategory] = useState<UnitCategory>("length");
+  const [category, setCategory] = useState<UnitCategory>(initialCategory);
+
+  useEffect(() => {
+    setCategory(initialCategory);
+  }, [initialCategory]);
 
 
   const convert = (): number | "" => {

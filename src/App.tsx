@@ -15,12 +15,12 @@ const App: React.FC = () => {
         setOutputUnit("foot");
         break;
       case "weight":
-        setInputUnit("kg");
-        setOutputUnit("lb");
+        setInputUnit("kilogram");
+        setOutputUnit("pound");
         break;
       case "volume":
-        setInputUnit("l");
-        setOutputUnit("m^3");
+        setInputUnit("liter");
+        setOutputUnit("cubic meter");
         break;
     }
   }, [category]);
@@ -30,17 +30,17 @@ const App: React.FC = () => {
       units = ["meter", "foot", "kilometer", "inch", "mile"] as LengthUnit[];
       break;
     case "weight":
-      units = ["kg", "g", "lb"] as WeightUnit[];
+      units = ["kilogram", "gram", "pound"] as WeightUnit[];
       break;
     case "volume":
-      units = ["l", "m^3", "cc"] as VolumeUnit[];
+      units = ["liter", "cubic meter", "cc"] as VolumeUnit[];
       break;
   }
 
   return (
     <div className='grid h-80 justify-center mt-36'>
       <div className='rounded-md width border border-c'>
-        <h1 className='text-white text-center font-bold text-3xl mb-10 pt-9'>Unit Converter</h1>
+        <h1 className='text-slate-100 text-center font-bold text-3xl mb-10 pt-9'>Unit Converter</h1>
         <Converter
           key={category}
           units={units}
