@@ -8,9 +8,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(30 41 59);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.width {
+  width: 650px;
+}
+
+.border-c {
+  border-color: #77ABAB;
+}
+
+.select-width {
+  width: 516.2px;
+}
+
+.selected:focus {
+  outline: none;
 }

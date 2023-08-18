@@ -1,4 +1,4 @@
-import { LengthUnit, WeightUnit, VolumeUnit } from "./types";
+import { LengthUnit, WeightUnit, VolumeUnit } from "../types/units";
 
 export const LENGTH_CONVERSION_RATES: Record<LengthUnit, number> = {
   meter: 1,
@@ -15,7 +15,7 @@ export const WEIGHT_CONVERSION_RATES: Record<WeightUnit, number> = {
 };
 
 export const VOLUME_CONVERSION_RATES: Record<VolumeUnit, number> = {
-  L: 1,
+  l: 1,
   "m^3": 0.001,
   cc: 1000
 };
